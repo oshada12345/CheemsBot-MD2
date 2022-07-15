@@ -196,10 +196,10 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
 	    if (setting) {
 		if (!isNumber(setting.status)) setting.status = 0
-		if (!('autobio' in setting)) setting.autobio = false
+		if (!('autobio' in setting)) setting.autobio = ture
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
-		autobio: false,
+		autobio: ture,
 	    }
 	    
         } catch (err) {
@@ -2714,7 +2714,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            imageMessage: {
+                            locationMessage: {
                             jpegThumbnail: fs.readFileSync('./sathan.jpg')},
                             hydratedFooterText: `
 ╭─❏ *『 INFO USER 』*
@@ -2770,7 +2770,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            imageMessage: {
+                            locationMessage: {
                             jpegThumbnail: fs.readFileSync('./sathan.jpg')}, 
                             hydratedFooterText: `
 ┌─❖
@@ -3060,7 +3060,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            imageMessage: {
+                            locationMessage: {
                             jpegThumbnail: fs.readFileSync('./sathan.jpg')},
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
