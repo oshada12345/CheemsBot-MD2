@@ -2861,7 +2861,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 									{
 										"title": "All Menu",
 										"description": "Displays The List Of All The Features!",
-										"rowId": `${prefix}allmenu`
+										"rowId": `${prefix}mainmenuk`
 									},
 									{
 										"title": "Owner Menu",
@@ -2938,7 +2938,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 reply(`GitHub : https://github.com/oshadaXD/sathan-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
- case 'allmenu' {
+ case 'mainmenuk' {
   	anu = `
       ╭─❏ *『 INFO USER 』*
       │ ⛧⸸  Name : ${pushname}
