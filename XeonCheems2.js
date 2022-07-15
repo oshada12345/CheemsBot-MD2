@@ -148,30 +148,11 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
         const text = q = args.join(" ")
         const quoted = m.quoted ? m.quoted : m
         const mime = (quoted.msg || quoted).mimetype || ''
+        const mime = (quoted.msg || quoted).mimetype || ''
 	    const isMedia = /image|video|sticker|audio/.test(mime)
-	    
-        const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')
-        if(time2 < "23:59:00"){
-        var ucapanWaktu = 'සුභ රාත්රියක් 🏙️'
-}
-        if(time2 < "19:00:00"){
-        var ucapanWaktu = 'සුභ සන්ද්යාවක් 🌆'
-}
-        if(time2 < "18:00:00"){
-        var ucapanWaktu = 'සුභ සන්ධ්යාවක් 🌇'
-}
-        if(time2 < "15:00:00"){
-        var ucapanWaktu = 'සුභ සන්ධ්යාවක් 🌤️'
-}
-        if(time2 < "10:00:00"){
-        var ucapanWaktu = 'සුභ උදෑසනක් 🌄'
-}
-        if(time2 < "05:00:00"){
-        var ucapanWaktu = 'සුභ පැතුම්  🌆'
-}
-        if(time2 < "03:00:00"){
-        var ucapanWaktu = 'Good Night '
-}
+	    const from = mek.key.remoteJid
+	    const type = Object.keys(mek.message)[0]        
+	    const content = JSON.stringify(mek.message)
 
         //group\\
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
