@@ -208,11 +208,11 @@ module.exports = XeonBotInc = async (XeonBotInc, m, chatUpdate, store) => {
 	
 	//group target by xeon\\
 const reply = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./sathan.jpg`),"sourceUrl": "https://chat.whatsapp.com/FpSYSjKWhL5"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./sathan.jpg`),"sourceUrl": "https://chat.whatsapp.com/IM3kisqn93y5ulAwobJUaC"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./sathan.jpg`),"sourceUrl": "https://chat.whatsapp.com/xyeQbHoS"}}}, { quoted: m})
+            XeonBotInc.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./sathan.jpg`),"sourceUrl": "https://chat.whatsapp.com/IM3kisqn93y5ulAwobJUaC"}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -2714,7 +2714,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            locationMessage: {
+                            imageMessage: {
                             jpegThumbnail: fs.readFileSync('./sathan.jpg')},
                             hydratedFooterText: `
 ╭─❏ *『 INFO USER 』*
@@ -2770,7 +2770,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            locationMessage: {
+                            imageMessage: {
                             jpegThumbnail: fs.readFileSync('./sathan.jpg')}, 
                             hydratedFooterText: `
 ┌─❖
@@ -3060,7 +3060,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     templateMessage: {
                         hydratedTemplate: {
                             hydratedContentText: anu,
-                            locationMessage: {
+                            imageMessage: {
                             jpegThumbnail: fs.readFileSync('./sathan.jpg')},
                             hydratedFooterText: `${pushname}`,
                             hydratedButtons: [{
