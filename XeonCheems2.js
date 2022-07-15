@@ -1476,7 +1476,7 @@ break
                             }, {
                                 quickReplyButton: {
                                     displayText: '🎀Menu🎀',
-                                    id: 'menu'
+                                    id: 'menuall'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1510,7 +1510,7 @@ break
                             }, {
                                 quickReplyButton: {
                                     displayText: '🎀Menu🎀',
-                                    id: 'menu'
+                                    id: 'menuall'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2767,13 +2767,9 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             }, {
                                 quickReplyButton: {
                                     displayText: 'All Menu',
-                                    id: `${prefix}allmenu`
+                                    id: `${prefix}menuall`
                                 }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: 'List Menu',
-                                    id: `${prefix}command`
-                                }
+                                }, 
                                 }, {
                                 quickReplyButton: {
                                     displayText: '👤Owner👤',
@@ -2786,7 +2782,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
-            case 'list': case 'menu': case 'help': case '?': {
+          p  case 'list': case 'menu': case 'help': case '?': {
             	timestampe = speed();
 latensie = speed() - timestampe
                 anu = ``
@@ -2827,14 +2823,9 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             }, {
                                 quickReplyButton: {
                                     displayText: '🍇All Menu🍇',
-                                    id: `${prefix}allmenu`
+                                    id: `${prefix}menuall`
                                 }
-                                }, {
-                                quickReplyButton: {
-                                    displayText: '🍒List Menu🍒',
-                                    id: `${prefix}command`
-                                }
-                                }, {
+                                },  {
                                 quickReplyButton: {
                                     displayText: '👤Owner👤',
                                     id: `${prefix}owner`
@@ -2846,11 +2837,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
                 break
-                case 'command': {
+                case 'menuall' : case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
                     title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu \n\n`,
+                    description: `Please Choose The Menu \n⛧ S A T H A N ⸸ \nMade By Vimukthi`,
                     buttonText: "Menu List Button",
                     footerText: `${global.footer}`,
                     listType: "SINGLE_SELECT",
@@ -2882,11 +2873,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"description": "Displays The List Of Main Features",
 										"rowId": `${prefix}groupmenu`
 										},
-									{
-										"title": "Rpg Menu",
-										"description": "Displays The List Of Rpg Features",
-										"rowId": `${prefix}rpgmenu`
-									},
+								
 									{
 										"title": "Download Menu",
 										"description": "Displays The List Of Download Features",
@@ -2896,22 +2883,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"title": "Search Menu",
 										"description": "Displays The List Of Searching Features",
 										"rowId": `${prefix}searchmenu`
-									},
-									{
-											"title": "Random Menu",
-										"description": "Displays The List Of Random Features",
-										"rowId": `${prefix}randommenu`
-										},
-										{
-											"title": "Random Anime Menu",
-										"description": "Displays The List Of Random Anime Features",
-										"rowId": `${prefix}randomanimemenu`
-										},
-										{
-											"title": "Fun Menu",
-										"description": "Displays The List Of Fun Features",
-										"rowId": `${prefix}funmenu`
-										},
+									},							
 										{
 											"title": "Convert Menu",
 										"description": "Displays The List Of Convert Features",
@@ -2927,11 +2899,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 										"description": "Displays The List Of Voice Changing Features",
 										"rowId": `${prefix}voicechangermenu`
 										},
-										{
-											"title": "Islamic Menu",
-										"description": "Displays The List Of Islamic Features",
-										"rowId": `${prefix}islamicmenu`
-										},
+									
 									
 								]
 							},
@@ -2970,7 +2938,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 reply(`GitHub : https://github.com/oshadaXD/sathan-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
-case 'allmenu': {
+ case 'allmenu' {
   	anu = `
       ╭─❏ *『 INFO USER 』*
       │ ⛧⸸  Name : ${pushname}
@@ -3213,7 +3181,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧${prefix}checkvote
  │⛧${prefix}delvote
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 
 
@@ -3261,7 +3229,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧${prefix}checkvote
  │⛧${prefix}delvote
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Downloader Menu')
@@ -3293,7 +3261,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧${prefix}joox [query]
  │⛧${prefix}soundcloud [url]
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
@@ -3329,7 +3297,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧${prefix}ringtone [query]
  │⛧${prefix}webtoon [query]
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 
 case 'textpromenu':
@@ -3386,7 +3354,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧ ${prefix}blackpink [txt]
  │⛧ ${prefix}gluetext [txt]
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 case 'convertmenu':
 var unicorn = await getBuffer(picak+'Converter Menu')
@@ -3423,7 +3391,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧ ${prefix}ebinary [reply txt]
  │⛧ ${prefix}dbinary [reply txt]
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
@@ -3456,7 +3424,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧ ${prefix}getmsg
  │⛧ ${prefix}delmsg
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 case 'databasemenu':
 var unicorn = await getBuffer(picak+'Database Menu')
@@ -3486,7 +3454,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧${prefix}next
  │⛧${prefix}leave
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 
 case 'voicechangermenu':
@@ -3523,7 +3491,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
  │⛧${prefix}slow [reply aud]
  │⛧${prefix}squirrel [reply aud]
  ╰───────────────❏
-┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menu'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+┗━━「 ${pushname} 」 `,unicorn, [{"quickReplyButton": {"displayText": "M E N U","id": 'menuall'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
 
 case 'thanksto': case 'tqto': case 'tqtt':
@@ -3550,7 +3518,7 @@ Recode By
 Vimukthi Oshada (Owner Of The Sathan Bot)
 Xeon (For the Script)
 My family
-And All Friends Who Helped Assemble This Script !!!`,unicorn, [{"quickReplyButton": {"displayText": "Main Menu","id": 'menu'}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
+And All Friends Who Helped Assemble This Script !!!`,unicorn, [{"quickReplyButton": {"displayText": "Main Menu","id": 'menuall'}},{"urlButton": {"displayText": "Script🔖","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "👤Owner👤","id": 'owner'}}] )
 break
             default:
                 if (budy.startsWith('=>')) {
