@@ -2938,8 +2938,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 reply(`GitHub : https://github.com/oshadaXD/sathan-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
             }
             break
- case 'mainmenuk' {
-  	anu = `
+ case 'mainmenuk' : {
+    anu = `
+
       ╭─❏ *『 INFO USER 』*
       │ ⛧⸸  Name : ${pushname}
       │ ⛧⸸  Number : ${m.sender.split('@')[0]}
@@ -3073,8 +3074,8 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
  │⛧${prefix}robot [reply aud]
  │⛧${prefix}slow [reply aud]
  │⛧${prefix}squirrel [reply aud]
-╰───────────────❏
- 「 *Created By ${ownername}* 」 `
+╰───────────────❏ 
+ 「 *Created By ${ownername}* 」 ` 
     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
