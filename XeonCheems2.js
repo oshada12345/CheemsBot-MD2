@@ -2725,7 +2725,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -2929,7 +2929,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
       │ ⛧⸸  Prefix : ${prefix}
       │ ⛧⸸  Nama : ${global.botname}
       │ ⛧⸸  owner :  ${global.ownername}
-      │ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+      │ ⛧⸸  Mode : Recode By Vimukthi oshada
       │ ⛧⸸  Runtime : ${runtime(process.uptime())}
       │ ⛧⸸  Library : Baileys Multi Device
       ╰───────────────❏
@@ -3091,7 +3091,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
       │ ⛧⸸  Prefix : ${prefix}
       │ ⛧⸸  Nama : ${global.botname}
       │ ⛧⸸  owner :  ${global.ownername}
-      │ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+      │ ⛧⸸  Mode : Recode By Vimukthi oshada
       │ ⛧⸸  Runtime : ${runtime(process.uptime())}
       │ ⛧⸸  Library : Baileys Multi Device
       ╰───────────────❏
@@ -3130,7 +3130,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3178,7 +3178,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3223,7 +3223,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3255,7 +3255,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3292,7 +3292,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3349,7 +3349,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3385,7 +3385,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3419,7 +3419,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3449,7 +3449,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
@@ -3486,7 +3486,7 @@ await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
 │ ⛧⸸  Prefix : ${prefix}
 │ ⛧⸸  Nama : ${global.botname}
 │ ⛧⸸  owner :  ${global.ownername}
-│ ⛧⸸  Mode : ${hisoka.public ? 'Public' : 'Self'}
+│ ⛧⸸  Mode : Recode By Vimukthi oshada
 │ ⛧⸸  Runtime : ${runtime(process.uptime())}
 │ ⛧⸸  Library : Baileys Multi Device
 ╰───────────────❏
