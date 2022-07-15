@@ -2769,7 +2769,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                     displayText: 'All Menu',
                                     id: `${prefix}menuall`
                                 }
-                                }, 
+                                 
                                 }, {
                                 quickReplyButton: {
                                     displayText: '👤Owner👤',
