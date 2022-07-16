@@ -2873,7 +2873,7 @@ break
 └┬──────────────❏
    │✑  Please Select The Button Below
    ╰───────────────❏`,
-   hydratedButtons [{
+    [{
                                 urlButton: {
                                     displayText: 'YouTube📍',
                                     url: `${myweb}`
