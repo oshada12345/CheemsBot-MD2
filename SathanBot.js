@@ -280,15 +280,8 @@ const reply = (teks) => {
             timezone: "Asia/Kolkata"
         })
         
-	//auto set bio\\
-	if (db.data.settings[botNumber].autobio) {
-	    let setting = global.db.data.settings[botNumber]
-	    if (new Date() * 1 - setting.status > 1000) {
-		let uptime = await runtime(process.uptime())
-		await SathanBot.setStatus(`${SathanBot.user.name} | Runtime : ${runtime(uptime)}`)
-		setting.status = new Date() * 1
-	    }
-	}
+
+	
 	
 	  //antilink\\
         if (db.data.chats[m.chat].antilink) {
