@@ -181,6 +181,38 @@ module.exports = SathanBot = async (SathanBot, m, chatUpdate, store) => {
                 afkReason: '',
                 limit: limitUser,
             }
+
+            //react function
+const reactionMessage = {
+                    react: {
+                        text: args[0],
+                        key: { remoteJid: m.chat, fromMe: true, id: quoted.id }
+                    }
+                }
+                
+                const timestampe = speed();
+const latensie = speed() - timestampe
+                const menulist = `┌─❖
+│「 Hi 👋 」
+└┬❖ 「 ${pushname} 」
+┌┤✑  How Are You? 😄
+│└────────────┈ ⳹
+│
+└─「 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊 」       
+│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botname}
+│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownername}
+│𝗢𝘄𝗻𝗲𝗿 𝗡𝗼. : ${global.owner}
+│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
+│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
+│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${jumlahcmd}
+│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${jumlahharian}
+└┬────────────┈ ⳹
+   │✑  Please Select
+   │✑  The Button Below
+   └─────────────┈ ⳹`
     
             let chats = global.db.data.chats[m.chat]
             if (typeof chats !== 'object') global.db.data.chats[m.chat] = {}
@@ -192,20 +224,30 @@ module.exports = SathanBot = async (SathanBot, m, chatUpdate, store) => {
                 antilink: false,
             }
 		
-	    let setting = global.db.data.settings[botNumber]
+	   
+            let setting = global.db.data.settings[botNumber]
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
 	    if (setting) {
 		if (!isNumber(setting.status)) setting.status = 0
 		if (!('autobio' in setting)) setting.autobio = false
+if (!('templateImage' in setting)) setting.templateImage = false
+if (!('templateVideo' in setting)) setting.templateVideo = false
+		if (!('templateGif' in setting)) setting.templateGif = false
+		if (!('templateMsg' in setting)) setting.templateMsg = false
+		if (!('templateDocument' in setting)) setting.templateDocument = true
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
 		autobio: false,
+		templateImage: false,
+		templateVideo: false,
+		templateGif: false,
+		templateMsg: false,
+		templateDocument: true,
 	    }
 	    
         } catch (err) {
             console.error(err)
         }
-	
 	//group target by xeon\\
 const reply = (teks) => {
             SathanBot.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Join Bot's Official GC`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./sathan.jpg`),"sourceUrl": "https://chat.whatsapp.com/IM3kisqn93y5ulAwobJUaC"}}}, { quoted: m})
@@ -2677,6 +2719,62 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 reply(respon)
             }
             break
+            case 'setmenu': {
+            	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+            if (!isCreator) return reply(mess.owner)
+            let setbot = db.data.settings[botNumber]
+               if (args[0] === 'templateImage'){
+                setbot.templateImage = true
+                setbot.templateVideo = false
+                setbot.templateGif = false
+                setbot.templateMsg = false
+                setbot.templateDocument = false
+                reply(mess.success)
+                } else if (args[0] === 'templateVideo'){
+                setbot.templateImage = false
+                setbot.templateVideo = true
+                setbot.templateGif = false
+                setbot.templateMsg = false
+                setbot.templateLocation = false
+                reply(mess.success)
+                } else if (args[0] === 'templateGif'){
+                setbot.templateImage = false
+                setbot.templateVideo = false
+                setbot.templateGif = true
+                setbot.templateMsg = false
+                setbot.templateDocument = false
+                reply(mess.success)
+                //} else if (args[0] === 'templateMessage'){
+                /////setbot.templateImage = false
+                /////setbot.templateVideo = false
+                /////setbot.templateGif = false
+                /////setbot.templateMsg = true
+                //////setbot.templateDocument = false
+                //////reply(mess.success)
+                } else if (args[0] === 'templateDocument'){
+                setbot.templateImage = false
+                setbot.templateVideo = false
+                setbot.templateGif = false
+                setbot.templateMsg = false
+                setbot.templateDocument = true
+                reply(mess.success)
+                } else {
+                let sections = [
+                {
+                title: "😛CHANGE BOT MENU😛",
+                rows: [
+                {title: "Image Menu", rowId: `setmenu templateImage`, description: `Tap to change bot menu to Image Menu`},
+                {title: "Gif Menu", rowId: `setmenu templateGif`, description: `Tap to change bot menu to Gif Menu`},
+                {title: "Video Menu", rowId: `setmenu templateVideo`, description: `Tap to change bot menu to Video Menu`},
+                ///////////////{title: "Text Menu", rowId: `setmenu templateMessage`, description: `Tap to change bot menu to Text Menu`},
+                {title: "Document Menu", rowId: `setmenu templateDocument`, description: `Tap to change bot menu to Document Menu`}
+                ]
+                },
+                ]
+                SathanBot.sendListMsg(m.chat, `Please select the menu you want to change!`, ` `, SathanBot.user.name, `Click Here`, sections, m)
+                }
+            }
             case 'speedtest': {
             reply('Testing Speed...')
             let cp = require('child_process')
@@ -2763,16 +2861,10 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 }
 break
            case 'list': case 'menu': case 'help': case '?': {
-            	timestampe = speed();
-latensie = speed() - timestampe
-                anu = ``
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./sathan.jpg')}, 
-                            hydratedFooterText: `
+            if (isBan) return reply(mess.ban)	 			
+            if (isBanChat) return reply(mess.banChat)
+            XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
+            `
 ┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
@@ -2790,7 +2882,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 └┬──────────────❏
    │✑  Please Select The Button Below
    ╰───────────────❏`,
-                            hydratedButtons: [{
+   hydratedButtons [{
                                 urlButton: {
                                     displayText: 'YouTube📍',
                                     url: `${myweb}`
@@ -2811,12 +2903,29 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                                     id: `${prefix}owner`
                                 }
                             }]
+                            let setbot = db.data.settings[botNumber]
+                           if (setbot.templateImage) {
+                           SathanBot.send5ButImg(m.chat, menulist, global.botname, global.thumb, btn, global.thumb)
+                           } else if (setbot.templateGif) {
+                           SathanBot.send5ButGif(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                           } else if (setbot.templateVid) {
+                           SathanBot.send5ButVid(m.chat, anu, global.botname, global.vidmenu, btn, global.thumb)
+                           } else if (setbot.templateVideo) {
+                           SathanBot.send5ButVid(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                           /////////} else if (setbot.templateMsg) {
+                           /////////SathanBot.send5ButMsg(m.chat, menulist, global.botname, btn)
+                           } else if (setbot.templateDocument) {
+                           let buttonmenu = [
+               { urlButton: { displayText: `Whatsapp 🍒`, url : wallpaper.me/+94775792013 } },
+               { urlButton: { displayText: `Script 🍜`, url: `${sc}` } },
+               { quickReplyButton: { displayText: `All Menu 🍱`, id: 'mainmenuk'} },
+               { quickReplyButton: { displayText: `List Menu 🍢`, id: 'mainmenu'} },
+               { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+               ]
+               SathanBot.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
+                           }
                         }
-                    }
-                }), { userJid: m.chat })
-                SathanBot.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                }
-                break
+               break
                 case 'menuall' : case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
