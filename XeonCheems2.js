@@ -114,11 +114,7 @@ const dgxeon = require('xfarr-api')
  let _buruan = JSON.parse(fs.readFileSync('./storage/user/hasil_buruan.json'));
  let _darahOrg = JSON.parse(fs.readFileSync('./storage/user/darah.json'))
 
-//Database\\
-let setik = JSON.parse(fs.readFileSync('./database/setik.json'));
-let vien = JSON.parse(fs.readFileSync('./database/vien.json'));
-let imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
-let videox = JSON.parse(fs.readFileSync('./database/video.json'))
+
 
 //read database\\
 let tebaklagu = db.data.game.tebaklagu = []
@@ -264,31 +260,7 @@ const reply = (teks) => {
         }
 
         //auto reply by xeon 🦄
-        for (let anji of setik){
-				if (budy === anji){
-					result = fs.readFileSync(`./XeonMedia/sticker/${anji}.webp`)
-					XeonBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
-					}
-			}
-			for (let anju of vien){
-				if (budy === anju){
-					result = fs.readFileSync(`./XeonMedia/vn/${anju}.mp3`)
-					XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-					}
-			}
-			for (let anjh of imagi){
-				if (budy === anjh){
-					result = fs.readFileSync(`./XeonMedia/image/${anjh}.jpg`)
-					XeonBotInc.sendMessage(m.chat, { image: result }, { quoted: m })
-					}
-			}
-					for (let anjh of videox){
-				if (budy === anjh){
-					result = fs.readFileSync(`./XeonMedia/vid/${anjh}.mp4`)
-					XeonBotInc.sendMessage(m.chat, { video: result }, { quoted: m })
-					}
-				  }
-
+      
       //Mute Chat\\
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
       return
@@ -1006,7 +978,7 @@ case 'when':
 XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : *${kapankah}*` }, { quoted: m })
 					break
 case 'wangy':
-              if (!text) return replay(`Use Text, Example : ${prefix + command} cheems`)
+              if (!text) return replay(`Use Text, Example : ${prefix + command} Sathan`)
               qq = q.toUpperCase()
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaah the smell of hair ${qq} smelly i want to smell the fragrance ${qq} AAAAAAAAH ~ Her hair.... aaah i want to stroke her hair too ~~ AAAAAH ${qq} first time out in anime is cute too ❤️ ❤️ ❤️ so AAAAAAAH ${qq} AAAAAA LUCCUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️what ? ${qq} it's not real ? Just HELL you say ? no, no no no no no no no no no no no no no no no !! I DON'T CARE ABOUT THE REALITY, I DON'T CARE. ❤️ ❤️ ❤️ ${qq} me ... ${qq} on the laptop watching me, ${qq} .. you believe in me ? aaaaaaaaaaah thanks ${q} I don't want to give up ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH I STILL HAVE ${qq} ALSO NOT THE SAME AAAAAAAAAAAAAAH`
              reply(awikwok)
@@ -1598,6 +1570,8 @@ break
             reply(db)
         }
         break
+
+        
             case 'emojimix': {
 	        if (!text) return replay(`Example : ${prefix + command} 😅+🤔`)
 		let [emoji1, emoji2] = text.split`+`
@@ -1742,7 +1716,7 @@ break
                 }
                 break
         case 'gimage': case 'googleimage': {
-        if (!text) return reply(`Example : ${prefix + command} cheems`)
+        if (!text) return reply(`Example : ${prefix + command} Sathan`)
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
         n = result
@@ -2706,7 +2680,7 @@ Report Message: ${text}` })
 reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
                     }
                     break
-                    case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'cheems': case 'doge':{
+                    case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'Sathan': case 'doge':{
                            	timestampe = speed();
 latensie = speed() - timestampe
  anu = ` `
@@ -2762,17 +2736,8 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 }
 break
-           case 'list': case 'menu': case 'help': case '?': {
-            	timestampe = speed();
-latensie = speed() - timestampe
-                anu = ``
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./sathan.jpg')}, 
-                            hydratedFooterText: `
+           case 'list': case 'menu': case 'help': case '?': anu = ` {
+            	
 ┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
@@ -2789,34 +2754,49 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 │✙ 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
 └┬──────────────❏
    │✑  Please Select The Button Below
-   ╰───────────────❏`,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: 'YouTube📍',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                            	urlButton: {
-                                displayText: 'Script🔖',
-                                    url: `${sc}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '🍇All Menu🍇',
-                                    id: `${prefix}menuall`
-                                }
-                                },  {
-                                quickReplyButton: {
-                                    displayText: '👤Owner👤',
-                                    id: `${prefix}owner`
-                                }
-                            }]
+   ╰───────────────❏`
+   let btn = [{
+    urlButton: {
+        displayText: 'owner📽️',
+        url: 'https://wa.me/+94775792013'
+    }
+    }, {
+    urlButton: {
+        displayText: 'Group Bot🔗',
+        url: 'Update Soon'
+    }
+}, {
+    quickReplyButton: {
+        displayText: 'Rules❗',
+        id: 'rules'
+    }
+}, {
+    quickReplyButton: {
+        displayText: 'owner👤',
+        id: 'owner'
+    }  
+}, {
+    quickReplyButton: {
+        displayText: ' ⛧ S A T H A N ⸸',
+        id: 'command'
+    }
+}]
+let setbot = db.data.settings[botNumber]
+if (setbot.templateImage) {
+oshada.send5ButImg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumbt, btn, global.thumbt)
+} else if (setbot.templateGif) {
+oshada.send5ButGif(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumbt)
+} else if (setbot.templateVid) {
+oshada.send5ButVid(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.visoka, btn, global.thumbt)
+} else if (setbot.templateMsg) {
+oshada.send5ButMsg(m.chat, anu, '© ⛧ S A T H A N ⸸ ', btn)
+} else if (setbot.templateLocation) {
+oshada.send5ButLoc(m.chat, anu, '© ⛧ S A T H A N ⸸ ', global.thumb, btn)
+}
+
                         }
-                    }
-                }), { userJid: m.chat })
-                XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                }
-                break
+
+              
                 case 'menuall' : case 'command': {
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
@@ -2910,14 +2890,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
-    case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                XeonBotInc.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg' }, caption: `*Hi Bro ${m.pushName}*\n\nDonate Me : \n\n⛧⸸ Fampay : https://telegra.ph/file/6ba2aed566865a068e91f.jpg\n⛧⸸ Paytm : https://telegra.ph/file/577bd4f28d90ca2c7f369.jpg\n\nIf You Want To Donate, Talk With The Owner First\nwa.me/94775792013 (Click To Contact)` }, { quoted: m })
-            }
-            break
-            case 'sc': case 'script': {
-                reply(`GitHub : https://github.com/oshadaXD/sathan-MD\n Dont Forget To Give Star\n\nYouTube : ${myweb}\nDont Forget To Watch Tutorial`)
-            }
-            break
+    
  case 'mainmenuk' : {
     anu = `
 
@@ -3080,7 +3053,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
 break
-case 'mainmenu':
+case 'mainmenu': 
 var unicorn = await getBuffer(picak+'Main Menu')
 await XeonBotInc.send5ButImg(from, `` + '' + ' ', `
       ╭─❏ *『 INFO USER 』*
