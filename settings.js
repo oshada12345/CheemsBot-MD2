@@ -47,7 +47,12 @@ global.mess = {
     wait: 'In Process...',
     error: 'Error! Maybe Api Key Is Expired🤔!',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
+
 }
+
+global.thumbt = fs.readFileSync('./lib/ab67616d0000b273e10e2e89ef9b6516991eb36c.jpg')
+global.visoka = { url: 'https://telegra.ph/file/39c0aba89c1281605b7de.mp4' }
+
     global.limitawal = {
     premium: "Infinity",
     free: 2,
