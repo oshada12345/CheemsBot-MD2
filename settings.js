@@ -32,6 +32,7 @@ global.region = 'sri lanka, western province, gampaha'
 global.sc = 'https://github.com/'
 global.myweb = 'oshada.ga'
 global.packname = 'Sticker'
+global.reactmoji = "😘" //ur menu react emoji
 global.author = '⛧ S A T H A N ⸸ '
 global.sessionName = 'session'
 global.prefa = ['','!','.','🐦','🐤','🗿']
@@ -52,6 +53,8 @@ global.mess = {
 
 global.thumbt = fs.readFileSync('./lib/ab67616d0000b273e10e2e89ef9b6516991eb36c.jpg')
 global.visoka = { url: 'https://telegra.ph/file/39c0aba89c1281605b7de.mp4' }
+global.thumb = fs.readFileSync(".sathan.jpg") //ur thumb pic
+global.thum = fs.readFileSync("./sathan.jpg") //ur thumb pic
 
     global.limitawal = {
     premium: "Infinity",
