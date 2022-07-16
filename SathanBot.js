@@ -2852,10 +2852,10 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 }
 break
            case 'list': case 'menu': case 'help': case '?': {
-            if (isBan) return reply(mess.ban)	 			
-            if (isBanChat) return reply(mess.banChat)
-            XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
-            `
+		   anu = `
+		
+        
+           
 ┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
