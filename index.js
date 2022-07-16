@@ -94,6 +94,20 @@ async function startSathanBot() {
             console.log(err)
         }
     })
+	
+	//send a template message!
+const templateButtons = [
+    {index: 1, urlButton: {displayText: '⭐ Star Baileys on GitHub!', url: 'https://github.com/oshadaXD'}},
+    {index: 2, callButton: {displayText: 'Call me!', phoneNumber: '+94775792013'}},
+    {index: 3, quickReplyButton: {displayText: 'This is a reply, just like normal buttons!', id: 'id-like-buttons-message'}},
+]
+
+const templateMessage = {
+    text: "Hi it's a template message",
+    footer: 'Hello World',
+    templateButtons: templateButtons
+}
+
     
     // Group Update
     SathanBot.ev.on('groups.update', async pea => {
