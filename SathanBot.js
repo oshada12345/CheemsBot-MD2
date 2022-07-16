@@ -196,10 +196,10 @@ module.exports = SathanBot = async (SathanBot, m, chatUpdate, store) => {
             if (typeof setting !== 'object') global.db.data.settings[botNumber] = {}
 	    if (setting) {
 		if (!isNumber(setting.status)) setting.status = 0
-		if (!('autobio' in setting)) setting.autobio = ture
+		if (!('autobio' in setting)) setting.autobio = false
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
-		autobio: ture,
+		autobio: false,
 	    }
 	    
         } catch (err) {
