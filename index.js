@@ -89,7 +89,7 @@ async function startSathanBot() {
         if (!SathanBot.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
         m = smsg(SathanBot, mek, store)
-        require("./XeonCheems2")(SathanBot, m, chatUpdate, store)
+        require("./SathanBot")(SathanBot, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
